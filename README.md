@@ -1,6 +1,10 @@
 # PWM Breath Analyzer
 
-Two-layer Saleae Logic 2 extension for detecting LED breathing patterns over PWM.
+Saleae Logic 2 extension for detecting LED breathing patterns over PWM.
+
+
+![Demo](demo.png)
+
 
 ```
 Digital Channel
@@ -17,12 +21,11 @@ Digital Channel
 ### 1. Clone with submodule
 
 ```bash
-git clone --recurse-submodules <this-repo>
-# or if already cloned:
+git clone --recurse-submodules https://github.com/su-mt/pwm-breath-logic-analyzer
 git submodule update --init
 ```
 
-The submodule points to https://github.com/saleae/analyzer-sdk
+The submodule points to https://github.com/saleae/AnalyzerSDK
 
 ### 2. Build
 

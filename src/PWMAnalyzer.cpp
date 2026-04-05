@@ -45,10 +45,12 @@ void PWMAnalyzer::WorkerThread()
         U64 period      = t_next_rise - t_rise;
 
         // ── FrameV2: named fields consumed by Python HLA ─────────────
+#ifdef LOGIC2
         FrameV2 fv2;
         fv2.AddInteger( "pulse_width", pulse_width );
         fv2.AddInteger( "period",      period );
         mResults->AddFrameV2( fv2, "pwm", t_rise, t_next_rise - 1 );
+#endif
 
         // ── Old Frame: bubble text on the C++ analyzer track ─────────
         Frame frame;

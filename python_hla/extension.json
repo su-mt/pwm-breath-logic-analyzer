@@ -2,7 +2,7 @@
     "version": "0.0.1",
     "apiVersion": "1.0.0",
     "name": "Breath Detector",
-    "author": "",
+    "author": "mt",
     "supportedHosts": ["com.saleae.logic2"],
     "extensions": {
         "BreathDetector": {

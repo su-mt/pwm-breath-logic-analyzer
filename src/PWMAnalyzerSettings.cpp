@@ -29,12 +29,12 @@ bool PWMAnalyzerSettings::SetSettingsFromInterfaces()
 void PWMAnalyzerSettings::LoadSettings( const char* settings )
 {
     SimpleArchive archive;
-    archive.Init( settings );
+    archive.SetString( settings );
     archive >> mInputChannel;
 
     ClearChannels();
     AddChannel( mInputChannel, "PWM", true );
-    UpdateInterfacesFromSettings();
+    mInputChannelInterface->SetChannel( mInputChannel );
 }
 
 const char* PWMAnalyzerSettings::SaveSettings()
